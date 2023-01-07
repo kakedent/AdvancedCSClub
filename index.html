@@ -11,7 +11,7 @@
 }
 
 header {
-  background-color: #333;
+  background-color: #3d5a80 ;
   color: white;
   padding: 20px;
   display: flex;
@@ -30,7 +30,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background-color: #3d5a80;
 }
 nav a {
   text-decoration: none;
@@ -40,7 +40,7 @@ nav a {
   text-transform: uppercase;
 }
 nav a:hover {
-  background-color: #444;
+  background-color: #98c1d9;
 }
 main {
   display: flex;
@@ -99,7 +99,7 @@ footer p {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-color: #eee;
+  background-color: white;
   padding: 10px;
 }
 .card-action a {
@@ -110,38 +110,56 @@ footer p {
 .card-action a:hover {
   color: #555;
 }
+.expanded{
+   padding: 10px;
+}
+:not(.selected) > .expanded {
+    display: none;
+}
 
     </style>
   </head>
   <body>
     <header>
-      <h1>Advanced Academy Coding Club</h1>
+      <h1>Advance Academy Coding Club</h1>
     </header>
     <nav>
       <a href="#">
         <img src="icon.png" alt="icon" height="40px">
-        Advanced Academy
+        Advance Academy
       </a>
-      <a href="#">Events</a>
-      <a href="#">Resources</a>
-      <a href="#">About</a>
+      <a href="#Events">Events</a>
+      <a href="#Projects">Projects</a>
+      <a href="#About">About</a>
     </nav>
     <main>
       <div class="card">
         
-        <div class="card-content">
-          <h3>Event 1</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="card-content" id="Events">
+          <h3>Event 1: Annual Advance Academy Project Showcase</h3>
+          <p>Every year Advance Academy hosts a cometition for students to showcase their progress, a Panel of judges will evaluate each team's(maximum of two members) demonstration and rank them from bronze to gold based on their quality, with respect to the student's own capabilites</p>
         </div>
         <div class="card-action">
-          <a href="#">Learn More</a>
+          <a class="expander" href="#">Learn More</a>
+        </div>
+        <div class="expanded">
+            <h2>Rewards</h2>
+            <h4>The prizes for each tier are:</h4>
+            <p>     Tier 3(Bronze): Prize budget of 25$ for each member</p>
+            <p>     Tier 2(Silver): Prize budget of 50$ for each member</p>
+            <p>     Tier 1(Gold): Prize budget of 100$ for each member</p>
+            <p>The projects will be judged by a panel of 3 judges (Mr. Lee, Eric Bae, and Richard Durbin). There is no limit to winners of each Tier, so if every project is on a gold level, everyone will recive the maximum reward</p>
+            <h2>When</h2>
+            <p>You will have from December 16th to Janurary 13th to develop your projects, you are able to finish mostly unfinished projects(can not be almost complete)</p>
+            <h2>Presentation</h2>
+            <p>At the end of the 4 week period, each project will be presented by the creators and then evaluated by the judges. The expectation is that it relates to coding and utilizes the cumulation of all your skills and experience. At the halfway mark there will be a "review" period where peers will share their projects and recive new strategies and ideas for inspiration.</p>
         </div>
       </div>
       <div class="card">
         
         <div class="card-content">
           <h3>Event 2</h3>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
         <div class="card-action">
           <a href="#">Learn More</a>
@@ -157,15 +175,34 @@ footer p {
           <a href="#">Learn More</a>
         </div>
       </div>
-      <div class="card">
+      <div class="card" id="About">
         <div class="card-content">
           <h2>About Us</h2>
           <p>The Advanced Academy Coding Club is a student-led organization that aims to promote interest in computer science and provide a supportive community for learners of all levels. We offer a variety of events, including workshops, hackathons, and guest speaker sessions, as well as resources such as online tutorials and problem sets. Our club is open to students of all majors and experience levels, and we welcome anyone who is interested in learning more about coding and technology. Join us today and take your skills to the next level!</p>
+        </div>
+      </div>
+      <div class="card" id="Projects">
+        <div class="card-content">
+          <h2>Projects</h2>
+          <p>The Advance Academy Coding Club student projects:</p>
         </div>
       </div>
     </main>
     <footer>
       <p>Copyright 2023</p>
     </footer>
+    <script>
+        document.querySelectorAll('.expander').forEach(el => {
+            el.addEventListener('click', () => {
+                let parent = el.parentNode.parentNode;
+                if(parent.classList.contains('selected')){
+                    parent.classList.remove('selected');
+                }
+                else{
+                parent.classList.add('selected');
+                }
+            });
+        });
+    </script>
   </body>
 </html>
