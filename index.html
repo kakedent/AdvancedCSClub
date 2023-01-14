@@ -117,6 +117,35 @@ footer p {
 :not(.selected) > .expanded {
     display: none;
 }
+.hero {
+        height: 300px;
+        background-image: url("https://via.placeholder.com/1920x300.png?text=Hero+Image");
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .hero h2 {
+        font-size: 36px;
+        margin: 0;
+      }
+      .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 20px 0;
+      }
+      .card-container .card {
+        width: 30%;
+        margin: 20px;
+      }
+      .card-container .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
 
     </style>
   </head>
@@ -125,78 +154,45 @@ footer p {
       <h1>Advance Academy Coding Club</h1>
     </header>
     <nav>
-      <a href="#">
+      <a href="file:///C:/Users/Willy/Documents/Desktop2/AdvanceCSCLUB/index.html">
         <img src="logo.jpg" alt="icon" height="40px">
         Advance Academy
       </a>
-      <a href="file:///C:/Users/Admin/Desktop/Advance/Events.html">Events</a>
-      <a href="file:///C:/Users/Admin/Desktop/Advance/Projects.html">Projects</a>
-      <a href="file:///C:/Users/Admin/Desktop/Advance/About.html">About</a>
+      <a href="file:///C:/Users/Willy/Documents/Desktop2/AdvanceCSCLUB/Events.html">Events</a>
+      <a href="file:///C:/Users/Willy/Documents/Desktop2/AdvanceCSCLUB/Projects.html">Projects</a>
+      <a href="file:///C:/Users/Willy/Documents/Desktop2/AdvanceCSCLUB/About.html">About</a>
     </nav>
-    <main>
-      <div class="card">
-        
-        <div class="card-content" id="Events">
-          <h3>Event 1: Annual Advance Academy Project Showcase</h3>
-          <p>Every year Advance Academy hosts a cometition for students to showcase their progress, a Panel of judges will evaluate each team's(maximum of two members) demonstration and rank them from bronze to gold based on their quality, with respect to the student's own capabilites</p>
-        </div>
-        <div class="card-action">
-          <a class="expander" href="#">Learn More</a>
-        </div>
-        <div class="expanded">
-            <h2>Rewards</h2>
-            <h4>The prizes for each tier are:</h4>
-            <p>     Tier 3(Bronze): Prize budget of 25$ for each member</p>
-            <p>     Tier 2(Silver): Prize budget of 50$ for each member</p>
-            <p>     Tier 1(Gold): Prize budget of 100$ for each member</p>
-            <p>The projects will be judged by a panel of 3 judges (Mr. Lee, Eric Bae, and Richard Durbin). There is no limit to winners of each Tier, so if every project is on a gold level, everyone will recive the maximum reward</p>
-            <h2>When</h2>
-            <p>You will have from December 16th to Janurary 13th to develop your projects, you are able to finish mostly unfinished projects(can not be almost complete)</p>
-            <h2>Presentation</h2>
-            <p>At the end of the 4 week period, each project will be presented by the creators and then evaluated by the judges. The expectation is that it relates to coding and utilizes the cumulation of all your skills and experience. At the halfway mark there will be a "review" period where peers will share their projects and recive new strategies and ideas for inspiration.</p>
-        </div>
-      </div>
-      <div class="image">
-      <img src="anime.jpg" alt="Italian Trulli">
+    <div class="hero">
+      <h2>Welcome to Advance Academy Coding Club</h2>
     </div>
-      <div class="card">
-        
-        <div class="card-content">
-          <h3>Event 2</h3>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <main>
+      <p>We are a group of students dedicated to learning and exploring the world of coding. We host events and competitions throughout the year to showcase our progress and skills. Check out our upcoming events and past projects below.</p>
+      <div class="card-container">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200.png?text=Event+1" alt="Event 1">
+          <div class="card-content">
+            <h3>Event 1: Annual Advance Academy Project Showcase</h3>
+            <p>Every year Advance Academy hosts a cometition for students to showcase their progress, a Panel of judges will evaluate each team's(maximum of two members) demonstration and rank them from bronze to gold based on their quality, with...
+          </div>
         </div>
-        <div class="card-action">
-          <a href="#">Learn More</a>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200.png?text=Event+2" alt="Event 2">
+          <div class="card-content">
+            <h3>Event 2: Coding Workshop</h3>
+            <p>Learn the basics of coding in this workshop. We will cover basic concepts of programming and walk you through building a simple project. No prior experience is required. Register now to reserve your spot.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200.png?text=Project+1" alt="Project 1">
+          <div class="card-content">
+            <h3>Project 1: Weather App</h3>
+            <p>A simple web app that displays current weather conditions for a user-specified location. Built using HTML, CSS, and JavaScript.</p>
+          </div>
         </div>
       </div>
-      <div class="card">
-        
-        <div class="card-content">
-          <h3>Event 3</h3>
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        </div>
-        <div class="card-action">
-          <a href="#">Learn More</a>
-        </div>
-      </div>
-      
-      
     </main>
     <footer>
-      <p>Copyright 2023</p>
+      <p>Advance Academy Coding Club &copy;2023</p>
     </footer>
-    <script>
-        document.querySelectorAll('.expander').forEach(el => {
-            el.addEventListener('click', () => {
-                let parent = el.parentNode.parentNode;
-                if(parent.classList.contains('selected')){
-                    parent.classList.remove('selected');
-                }
-                else{
-                parent.classList.add('selected');
-                }
-            });
-        });
-    </script>
   </body>
 </html>
